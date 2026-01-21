@@ -9,7 +9,7 @@
 
     - name: display command output
       ansible.builtin.debug:
-        msg: {{ command_output }}
+        msg: "{{ command_output }}"
 
     - name: using shell module
       ansible.builtin.shell: "echo $HOME"
@@ -17,4 +17,4 @@
 
     - name: display shell output
       ansible.builtin.debug:
-        msg: {{ shell_output }}
+        msg: "{{ shell_output }}"
