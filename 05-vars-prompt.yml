@@ -1,0 +1,16 @@
+- name: varibales from prompt
+  hosts: client
+  vars_prompt:
+    - name: "Name"
+      prompt: "Enter your name"
+      private: no
+    - name: "position"
+      prompt: "Enter your position"
+      private: no
+    - name: "company"
+      prompt: "Enter your company name"
+      private: no
+  tasks: 
+    - name: print the varibales from prompt
+      ansible.builtin.debug:
+        msg: This is {{Name}}, working as {{position}} at {{company}}.
