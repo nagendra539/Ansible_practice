@@ -1,4 +1,4 @@
-- Name: calling vars from variable files
+- name: calling vars from variable files
   host: client
   vars_files:
     - vars.yml
