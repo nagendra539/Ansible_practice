@@ -1,5 +1,6 @@
 - name: datatypes in ansible
-  hosts: client
+  hosts: localhost
+  connection: local
   vars:
     string_var: "Hello, Ansible!"
     int_var: 42
