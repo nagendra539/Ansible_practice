@@ -1,5 +1,5 @@
 - name: datatypes in ansible
-  hosts: localhost
+  hosts: localhost # localhost is used for testing purposes
   connection: local
   vars:
     string_var: "Hello, Ansible!"
