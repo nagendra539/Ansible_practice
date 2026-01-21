@@ -1,0 +1,20 @@
+- name: command vs shell
+  hosts: localhost
+  become: yes
+  connection: local
+  tasks:
+    - name: using command module
+      ansible.builtin.command: ls -l /tmp
+      register: command_output
+
+    - name: display command output
+      ansible.builtin.debug:
+        msg: {{ command_output.stdout_lines }}
+
+    - name: using shell module
+      ansible.builtin.shell: "echo $HOME"
+      register: shell_output
+
+    - name: display shell output
+      ansible.builtin.debug:
+        msg: {{ shell_output.stdout }}
