@@ -1,0 +1,15 @@
+- name: install the packages in loop
+  hosts: localhost
+  become: yes
+  connection: local
+  tasks:
+    - name: install the packages
+      ansible.builtin.package:
+        name: "{{ item }}"
+        state: present
+      loop:
+        - httpd
+        - git
+        - tree
+        - wget
+        - curl
