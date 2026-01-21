@@ -1,10 +1,10 @@
 - name: varibales
   hosts: client
   vars:
-    name: Nagendra
+    Name: Nagendra
     position: Sr.Software Engineer II
     company: Zebra Technologies
   tasks: 
     - name: print the varibales
       ansible.builtin.debug:
-        msg: This is {{name}}, working as {{position}} at {{company}}.
+        msg: This is {{Name}}, working as {{position}} at {{company}}.
