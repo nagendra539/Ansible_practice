@@ -1,0 +1,6 @@
+- name: varibales
+  hosts: client
+  tasks: 
+    - name: print the varibales
+      ansible.builtin.debug:
+        msg: This is Nagendra, working as Sr.Software Engineer II at Zebra Technologies.
