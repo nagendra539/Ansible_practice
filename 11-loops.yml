@@ -10,4 +10,11 @@
       loop:
         - { name: "vim", state: "absent" }
         - { name: "git", state: "absent" }
-        
+    - name: install the packages
+      ansible.builtin.package:
+        name: "{{ item }}"
+        state: present
+      loop:
+        - "git"
+        - "vim"
+    
