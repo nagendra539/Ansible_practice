@@ -1,0 +1,8 @@
+- Name: calling vars from variable files
+  host: client
+  vars_files:
+    - vars.yml
+  tasks:
+    - name: print the varibales from var file
+      ansible.builtin.debug:
+        msg: This is {{Name}}, working as {{Position}} at {{Company}}.
