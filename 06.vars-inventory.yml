@@ -1,0 +1,6 @@
+- name: varibles from inventory file
+  hosts: client
+  tasks: 
+    - name: print the varibales from inventory file
+      ansible.builtin.debug:
+        msg: This is {{person}}, working as {{designation}} at {{org}}.
