@@ -1,0 +1,39 @@
+- name: datatypes in ansible
+  hosts: client
+  vars:
+    string_var: "Hello, Ansible!"
+    int_var: 42
+    float_var: 3.14
+    bool_var: true
+    list_var:
+      - "apple"
+      - "banana"
+      - "cherry"
+    dict_var:
+      name: "John Doe"
+      age: 30
+      city: "New York"
+  tasks:
+    - name: Print string variable
+      ansible.builtin.debug:
+        msg: "String Variable: {{ string_var }}"
+
+    - name: Print integer variable
+      ansible.builtin.debug:
+        msg: "Integer Variable: {{ int_var }}"
+
+    - name: Print float variable
+      ansible.builtin.debug:
+        msg: "Float Variable: {{ float_var }}"
+
+    - name: Print boolean variable
+      ansible.builtin.debug:
+        msg: "Boolean Variable: {{ bool_var }}"
+
+    - name: Print list variable
+      ansible.builtin.debug:
+        msg: "List Variable: {{ list_var }}"
+
+    - name: Print dictionary variable
+      ansible.builtin.debug:
+        msg: "Dictionary Variable: {{ dict_var }}"
