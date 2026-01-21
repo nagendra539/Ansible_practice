@@ -1,0 +1,10 @@
+- name: create the user
+  hosts: client
+  become: yes
+  tasks:
+  - name: check the user is exist or not
+    ansible.builtin.command: id expense
+    register: user_check
+  - name: print the register
+    ansible.builtin.debug:
+      msg: "{{ user_check }}"
