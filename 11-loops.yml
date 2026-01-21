@@ -5,11 +5,9 @@
   tasks:
     - name: install the packages
       ansible.builtin.package:
-        name: "{{ item }}"
-        state: present
+        name: "{{ item.name }}"
+        state: "{{ item.state }}"
       loop:
-        - httpd
-        - git
-        - tree
-        - wget
-        - curl
+        - { name: "vim", state: "absent" }
+        - { name: "git", state: "absent" }
+        
