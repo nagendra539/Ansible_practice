@@ -1,5 +1,5 @@
 - name: calling vars from variable files
-  host: client
+  hosts: client
   vars_files:
     - vars.yml
   tasks:
