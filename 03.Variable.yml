@@ -12,6 +12,6 @@
       vars:
         Name: Sushma
         position: Patent AGent
-        comany: Depenning
+        company: Depenning
       ansible.builtin.debug:
         msg: This is {{Name}}, working as {{position}} at {{company}}.
