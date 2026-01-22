@@ -17,6 +17,7 @@
       community.mysql.mysql_info:         
         login_user: root
         login_password: "{{ mysql_root_password }}}"
+        login_host: client
         register: mysql_info
         ignore_errors: yes
     - name: display mysql info
