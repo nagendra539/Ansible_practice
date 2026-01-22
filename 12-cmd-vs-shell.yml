@@ -4,7 +4,7 @@
   connection: local
   tasks:
     - name: using command module
-      ansible.builtin.command: ls -l /tmp
+      ansible.builtin.command: ps -ef | grep ssh
       register: command_output
 
     - name: display command output
