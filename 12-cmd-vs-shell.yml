@@ -1,7 +1,7 @@
 - name: command vs shell
-  hosts: localhost
+  hosts: client
   become: yes
-  connection: local
+  #connection: local
   tasks:
     - name: using command module
       ansible.builtin.command: ls -lrth /tmp
