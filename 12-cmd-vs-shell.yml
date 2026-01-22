@@ -4,7 +4,7 @@
   connection: local
   tasks:
     - name: using command module
-      ansible.builtin.command: ps -ef | grep ssh
+      ansible.builtin.command: ls -lrth /tmp
       register: command_output
 
     - name: display command output
@@ -12,7 +12,7 @@
         msg: "{{ command_output }}"
 
     - name: using shell module
-      ansible.builtin.shell: "echo $HOME"
+      ansible.builtin.shell: ps -ef | grep ssh
       register: shell_output
 
     - name: display shell output
