@@ -1,5 +1,5 @@
 - name: varibles from inventory file
-  hosts: client
+  hosts: mysql
   tasks: 
     - name: print the varibales from inventory file
       ansible.builtin.debug:
