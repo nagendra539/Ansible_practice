@@ -1,6 +1,7 @@
 - name: calling vars from variable files
-  hosts: client
+  hosts: mysql
   vars_files:
+    - /home/ec2-user/Ansible_practice/cred.yml
     - vars.yml
   tasks:
     - name: print the varibales from var file
