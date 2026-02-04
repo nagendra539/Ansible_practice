@@ -1,5 +1,6 @@
 - name: varibales from prompt
-  hosts: client
+  hosts: mysql
+  become: yes
   vars_prompt:
     - name: "Name"
       prompt: "Enter your name"
